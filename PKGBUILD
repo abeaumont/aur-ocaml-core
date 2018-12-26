@@ -1,8 +1,8 @@
 # Maintainer: Jakob Gahde <j5lx@fmail.co.uk>
 
 pkgname=ocaml-core
-pkgver=0.11.1
-pkgrel=2
+pkgver=0.11.3
+pkgrel=1
 epoch=1
 pkgdesc="Industrial strength alternative to OCaml's standard library"
 arch=('i686' 'x86_64')
@@ -13,17 +13,17 @@ optdepends=('ocaml-utop: for coretop support'
             'ocamlbuild: for corebuild support')
 makedepends=('dune')
 options=('!strip')
-source=("https://github.com/janestreet/core/releases/download/v${pkgver}/core-v${pkgver}.tbz")
-md5sums=('93ee333a0027bcda7cca3b323171d13b')
+source=("https://github.com/janestreet/core/archive/v${pkgver}.tar.gz")
+md5sums=('aa4e3acc952f1d5538a26f12e0b10fec')
 
 build() {
-  cd "${srcdir}/core-v${pkgver}"
+  cd "${srcdir}/core-${pkgver}"
 
   jbuilder build
 }
 
 package() {
-  cd "${srcdir}/core-v${pkgver}"
+  cd "${srcdir}/core-${pkgver}"
 
   install -dm755 "${pkgdir}$(ocamlfind -printconf destdir)" "${pkgdir}/usr/share"
   jbuilder install --prefix "${pkgdir}/usr" --libdir "${pkgdir}$(ocamlfind -printconf destdir)"

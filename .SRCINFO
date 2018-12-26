@@ -1,7 +1,7 @@
 pkgbase = ocaml-core
 	pkgdesc = Industrial strength alternative to OCaml's standard library
-	pkgver = 0.11.1
-	pkgrel = 2
+	pkgver = 0.11.3
+	pkgrel = 1
 	epoch = 1
 	url = https://github.com/janestreet/core
 	arch = i686
@@ -22,8 +22,8 @@ pkgbase = ocaml-core
 	optdepends = ocaml-utop: for coretop support
 	optdepends = ocamlbuild: for corebuild support
 	options = !strip
-	source = https://github.com/janestreet/core/releases/download/v0.11.1/core-v0.11.1.tbz
-	md5sums = 93ee333a0027bcda7cca3b323171d13b
+	source = https://github.com/janestreet/core/archive/v0.11.3.tar.gz
+	md5sums = aa4e3acc952f1d5538a26f12e0b10fec
 
 pkgname = ocaml-core
 
